@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_package = "proto";
+
+service ZodiacSign {
+
+  rpc Return(FromClient) returns (FromServer) {}
+
+}
+message FromClient {
+
+  string name = 1;
+  string message = 2;
+}
+
+message FromServer{
+  string  name = 1;
+  string  message = 2;
+}

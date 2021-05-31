@@ -59,6 +59,38 @@ public final class ChatServiceGrpc {
      return getReplyServerMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<proto.ChatApp.FromClient,
+      proto.ChatApp.MessageSent> getMessageResponseMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "messageResponse",
+      requestType = proto.ChatApp.FromClient.class,
+      responseType = proto.ChatApp.MessageSent.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<proto.ChatApp.FromClient,
+      proto.ChatApp.MessageSent> getMessageResponseMethod() {
+    io.grpc.MethodDescriptor<proto.ChatApp.FromClient, proto.ChatApp.MessageSent> getMessageResponseMethod;
+    if ((getMessageResponseMethod = ChatServiceGrpc.getMessageResponseMethod) == null) {
+      synchronized (ChatServiceGrpc.class) {
+        if ((getMessageResponseMethod = ChatServiceGrpc.getMessageResponseMethod) == null) {
+          ChatServiceGrpc.getMessageResponseMethod = getMessageResponseMethod = 
+              io.grpc.MethodDescriptor.<proto.ChatApp.FromClient, proto.ChatApp.MessageSent>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "ChatService", "messageResponse"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  proto.ChatApp.FromClient.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  proto.ChatApp.MessageSent.getDefaultInstance()))
+                  .setSchemaDescriptor(new ChatServiceMethodDescriptorSupplier("messageResponse"))
+                  .build();
+          }
+        }
+     }
+     return getMessageResponseMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -93,6 +125,13 @@ public final class ChatServiceGrpc {
       asyncUnimplementedUnaryCall(getReplyServerMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void messageResponse(proto.ChatApp.FromClient request,
+        io.grpc.stub.StreamObserver<proto.ChatApp.MessageSent> responseObserver) {
+      asyncUnimplementedUnaryCall(getMessageResponseMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -102,6 +141,13 @@ public final class ChatServiceGrpc {
                 proto.ChatApp.FromClient,
                 proto.ChatApp.LoginMessage>(
                   this, METHODID_REPLY_SERVER)))
+          .addMethod(
+            getMessageResponseMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                proto.ChatApp.FromClient,
+                proto.ChatApp.MessageSent>(
+                  this, METHODID_MESSAGE_RESPONSE)))
           .build();
     }
   }
@@ -131,6 +177,14 @@ public final class ChatServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getReplyServerMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void messageResponse(proto.ChatApp.FromClient request,
+        io.grpc.stub.StreamObserver<proto.ChatApp.MessageSent> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getMessageResponseMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -156,6 +210,13 @@ public final class ChatServiceGrpc {
     public proto.ChatApp.LoginMessage replyServer(proto.ChatApp.FromClient request) {
       return blockingUnaryCall(
           getChannel(), getReplyServerMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public proto.ChatApp.MessageSent messageResponse(proto.ChatApp.FromClient request) {
+      return blockingUnaryCall(
+          getChannel(), getMessageResponseMethod(), getCallOptions(), request);
     }
   }
 
@@ -184,9 +245,18 @@ public final class ChatServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getReplyServerMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<proto.ChatApp.MessageSent> messageResponse(
+        proto.ChatApp.FromClient request) {
+      return futureUnaryCall(
+          getChannel().newCall(getMessageResponseMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_REPLY_SERVER = 0;
+  private static final int METHODID_MESSAGE_RESPONSE = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -208,6 +278,10 @@ public final class ChatServiceGrpc {
         case METHODID_REPLY_SERVER:
           serviceImpl.replyServer((proto.ChatApp.FromClient) request,
               (io.grpc.stub.StreamObserver<proto.ChatApp.LoginMessage>) responseObserver);
+          break;
+        case METHODID_MESSAGE_RESPONSE:
+          serviceImpl.messageResponse((proto.ChatApp.FromClient) request,
+              (io.grpc.stub.StreamObserver<proto.ChatApp.MessageSent>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -271,6 +345,7 @@ public final class ChatServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ChatServiceFileDescriptorSupplier())
               .addMethod(getReplyServerMethod())
+              .addMethod(getMessageResponseMethod())
               .build();
         }
       }

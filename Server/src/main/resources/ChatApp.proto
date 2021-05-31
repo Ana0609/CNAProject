@@ -5,6 +5,7 @@ option java_package = "proto";
 service ChatService {
 
   rpc replyServer(FromClient) returns (LoginMessage) {}
+  rpc messageResponse(FromClient) returns (MessageSent) {}
 
 }
 message FromClient {
@@ -12,7 +13,6 @@ message FromClient {
   string name = 1;
   string message = 2;
 }
-
 message FromServer{
   string  name = 1;
   string  message = 2;
@@ -20,4 +20,7 @@ message FromServer{
 message LoginMessage{
 
   string logmessage = 1;
+}
+message MessageSent{
+  string messagesent=1;
 }

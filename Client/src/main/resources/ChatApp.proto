@@ -2,9 +2,9 @@ syntax = "proto3";
 
 option java_package = "proto";
 
-service ZodiacSign {
+service ChatService {
 
-  rpc Return(FromClient) returns (FromServer) {}
+  rpc replyServer(FromClient) returns (LoginMessage) {}
 
 }
 message FromClient {
@@ -16,4 +16,7 @@ message FromClient {
 message FromServer{
   string  name = 1;
   string  message = 2;
+}
+message LoginMessage{
+  string logmessage = 1;
 }

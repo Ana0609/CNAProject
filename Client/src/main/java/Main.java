@@ -18,10 +18,9 @@ public class Main {
         Scanner read = new Scanner(System.in);
         String nume = read.nextLine();
         while (nume.length() == 0) {
-            System.out.println("introduceti o nume normala");
+            System.out.println("Numele sunt obligatorie!Introduceti o nume mai lunga!");
             nume = read.nextLine();
         }
-
             ChatStub.replyServer(
                     ChatApp.FromClient.newBuilder().setName(nume).setMessage("default").build(),
                     new StreamObserver<ChatApp.LoginMessage>() {

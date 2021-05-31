@@ -26,6 +26,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="E:\FAC\II\MIP\IntelliJ IDEA Community Edition 2020.2.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1pCVgxHrE0kcKPxuTez5ztSuy1m" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -37,7 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Book-Finder/Client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Book-Finder/Server" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -90,5 +97,35 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="231" y="79" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616449826261">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="231" y="79" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1616449826261" />
+    <state x="557" y="179" key="FileChooserDialogImpl" timestamp="1622490250629">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="557" y="179" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1622490250629" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1622490395571">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622490395571" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1622490395571">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1622490395571" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1622490395571">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1622490395571" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1622490395571">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1622490395571" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1622410339146">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1622410339146" />
   </component>
 </project>

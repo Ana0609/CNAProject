@@ -25,5 +25,6 @@
     <orderEntry type="library" name="Maven: com.google.api.grpc:proto-google-common-protos:1.0.0" level="project" />
     <orderEntry type="library" name="Maven: io.grpc:grpc-protobuf-lite:1.15.1" level="project" />
     <orderEntry type="library" name="Maven: io.grpc:grpc-stub:1.15.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.annotation:javax.annotation-api:1.2" level="project" />
   </component>
 </module>

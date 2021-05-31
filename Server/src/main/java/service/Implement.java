@@ -5,9 +5,12 @@ import proto.ChatApp;
 import proto.ChatServiceGrpc;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
+import java.util.HashMap;
+
 
 public class Implement extends ChatServiceGrpc.ChatServiceImplBase {
     Logger logger = Logger.getLogger("Log");
@@ -24,6 +27,7 @@ public class Implement extends ChatServiceGrpc.ChatServiceImplBase {
         }
     }
 
+
     @Override
     public void replyServer(ChatApp.FromClient request, StreamObserver<ChatApp.LoginMessage> responseObserver) {
 
@@ -39,11 +43,24 @@ public class Implement extends ChatServiceGrpc.ChatServiceImplBase {
     @Override
     public void messageResponse(ChatApp.FromClient request, StreamObserver<ChatApp.MessageSent> responseObserver) {
 //        super.messageSent(request, responseObserver);
+        HashMap<String, String> messages = new HashMap<String, String>();
         ChatApp.MessageSent.Builder reply = ChatApp.MessageSent.newBuilder();
-        reply.setMessagesent(" message sent succesful ");
+        reply.setMessagesent(request.getMessage());
         logger.info(request.getName() + " sent a message");
+
+        messages.put(request.getName(),request.getMessage());
+
         System.out.println(request.getName()+": " + request.getMessage());
+
         responseObserver.onNext(reply.build());
         responseObserver.onCompleted();
+
+        System.out.println(messages);
+    }
+
+    @Override
+    public StreamObserver<ChatApp.FromServer> chatRequest(StreamObserver<ChatApp.FromClient> responseObserver) {
+        return super.chatRequest(responseObserver);
+
     }
 }

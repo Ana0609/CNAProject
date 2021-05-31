@@ -27,9 +27,7 @@ public class Main {
                         @Override
                         public void onNext(ChatApp.LoginMessage reply) {
                             System.out.println(reply);
-                            System.out.println("1) Send a message");
-                            System.out.println("0) Exit");
-                            System.out.println("Introduceti o optiune: ");
+
                         }
 
                         @Override
@@ -83,6 +81,7 @@ public class Main {
                                     }
                                 }
                         );
+
                         break;
                     case 0:
                         break;

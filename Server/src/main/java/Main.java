@@ -13,6 +13,7 @@ public class Main {
             server.start();
             System.out.println("Server started at " + server.getPort());
             server.awaitTermination();
+
         } catch (IOException e) {
             System.out.println("Error: " + e);
         } catch (InterruptedException e) {

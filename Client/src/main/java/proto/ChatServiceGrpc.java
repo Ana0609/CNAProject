@@ -91,6 +91,38 @@ public final class ChatServiceGrpc {
      return getMessageResponseMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<proto.ChatApp.FromClient,
+      proto.ChatApp.FromServer> getChatRequestMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "chatRequest",
+      requestType = proto.ChatApp.FromClient.class,
+      responseType = proto.ChatApp.FromServer.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<proto.ChatApp.FromClient,
+      proto.ChatApp.FromServer> getChatRequestMethod() {
+    io.grpc.MethodDescriptor<proto.ChatApp.FromClient, proto.ChatApp.FromServer> getChatRequestMethod;
+    if ((getChatRequestMethod = ChatServiceGrpc.getChatRequestMethod) == null) {
+      synchronized (ChatServiceGrpc.class) {
+        if ((getChatRequestMethod = ChatServiceGrpc.getChatRequestMethod) == null) {
+          ChatServiceGrpc.getChatRequestMethod = getChatRequestMethod = 
+              io.grpc.MethodDescriptor.<proto.ChatApp.FromClient, proto.ChatApp.FromServer>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "ChatService", "chatRequest"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  proto.ChatApp.FromClient.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  proto.ChatApp.FromServer.getDefaultInstance()))
+                  .setSchemaDescriptor(new ChatServiceMethodDescriptorSupplier("chatRequest"))
+                  .build();
+          }
+        }
+     }
+     return getChatRequestMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -132,6 +164,13 @@ public final class ChatServiceGrpc {
       asyncUnimplementedUnaryCall(getMessageResponseMethod(), responseObserver);
     }
 
+    /**
+     */
+    public io.grpc.stub.StreamObserver<proto.ChatApp.FromClient> chatRequest(
+        io.grpc.stub.StreamObserver<proto.ChatApp.FromServer> responseObserver) {
+      return asyncUnimplementedStreamingCall(getChatRequestMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -148,6 +187,13 @@ public final class ChatServiceGrpc {
                 proto.ChatApp.FromClient,
                 proto.ChatApp.MessageSent>(
                   this, METHODID_MESSAGE_RESPONSE)))
+          .addMethod(
+            getChatRequestMethod(),
+            asyncBidiStreamingCall(
+              new MethodHandlers<
+                proto.ChatApp.FromClient,
+                proto.ChatApp.FromServer>(
+                  this, METHODID_CHAT_REQUEST)))
           .build();
     }
   }
@@ -184,6 +230,14 @@ public final class ChatServiceGrpc {
         io.grpc.stub.StreamObserver<proto.ChatApp.MessageSent> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getMessageResponseMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<proto.ChatApp.FromClient> chatRequest(
+        io.grpc.stub.StreamObserver<proto.ChatApp.FromServer> responseObserver) {
+      return asyncBidiStreamingCall(
+          getChannel().newCall(getChatRequestMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -257,6 +311,7 @@ public final class ChatServiceGrpc {
 
   private static final int METHODID_REPLY_SERVER = 0;
   private static final int METHODID_MESSAGE_RESPONSE = 1;
+  private static final int METHODID_CHAT_REQUEST = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -293,6 +348,9 @@ public final class ChatServiceGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_CHAT_REQUEST:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.chatRequest(
+              (io.grpc.stub.StreamObserver<proto.ChatApp.FromServer>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -346,6 +404,7 @@ public final class ChatServiceGrpc {
               .setSchemaDescriptor(new ChatServiceFileDescriptorSupplier())
               .addMethod(getReplyServerMethod())
               .addMethod(getMessageResponseMethod())
+              .addMethod(getChatRequestMethod())
               .build();
         }
       }

@@ -1,5 +1,5 @@
 # Chat App
-Book Finder application is a client-server application (gRPC) for educational purposes.
+Chat application is a client-server application (gRPC) for educational purposes.
 
 # Instalation
 

@@ -65,7 +65,7 @@ public class Implement extends ChatServiceGrpc.ChatServiceImplBase {
         responseObserver.onNext(reply.build());
         responseObserver.onCompleted();
 
-        System.out.println(messages);
+        //System.out.println(messages);
     }
-    
+
 }

@@ -43,14 +43,21 @@ public class Main {
             );
 
 
-            System.out.println(("1) Sending other message"));
+            System.out.println(("1) Sending message"));
             System.out.println("0) Exit");
             System.out.println("Introduceti o optiune: ");
             int option = -1;
             while (option != 0) {
 
-                Scanner sc = new Scanner(System.in);
-                option = sc.nextInt();
+                    Scanner sc = new Scanner(System.in);
+                    try {
+                        option = sc.nextInt();
+
+                    } catch (Exception e) {
+                        System.out.println("Something went wrong.Data introdusa a fost incorecta! Incercati din nou");
+                    }
+
+
 
 
                 switch (option) {
@@ -81,7 +88,6 @@ public class Main {
                                     }
                                 }
                         );
-
                         break;
                     case 0:
 
@@ -105,7 +111,6 @@ public class Main {
                                     }
                                 }
                         );
-
                         break;
                     default:
                         System.out.println("Nu stiu comanda asta!");

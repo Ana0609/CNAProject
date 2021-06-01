@@ -5,24 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bb6e8fa-95d3-44ab-b18e-ae6e18ee0699" name="Default Changelist" comment="">
-<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_grpc_proto_google_common_protos_1_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_grpc_proto_google_common_protos_1_0_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/client.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/proto/ChatApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proto/ChatApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/proto/ChatServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proto/ChatServiceGrpc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ChatApp.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ChatApp.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/GUI/Views/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUI/Views/Main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/server.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/proto/ChatApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/proto/ChatApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/proto/ChatServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/proto/ChatServiceGrpc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/service/Implement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/service/Implement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/resources/ChatApp.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/resources/ChatApp.proto" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/src/main/resources/GUI/Views/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_grpc_proto_google_common_protos_1_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_grpc_proto_google_common_protos_1_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/server.iml" afterDir="false" />
->>>>>>> Added GUI.
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,11 +45,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-<<<<<<< HEAD
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CNAProject/Client" />
-=======
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
->>>>>>> Added GUI.
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -108,32 +100,8 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1622540924842">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1622540924842" />
-    <state width="1493" height="124" key="GridCell.Tab.0.bottom" timestamp="1622541224941">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="124" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622541224941" />
-    <state width="1493" height="124" key="GridCell.Tab.0.center" timestamp="1622541224941">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="124" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1622541224941" />
-    <state width="1493" height="124" key="GridCell.Tab.0.left" timestamp="1622541224941">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="124" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1622541224941" />
-    <state width="1493" height="124" key="GridCell.Tab.0.right" timestamp="1622541224941">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="124" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1622541224941" />
-=======
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
->>>>>>> Added GUI.
   </component>
 </project>

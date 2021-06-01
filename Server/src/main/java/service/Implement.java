@@ -31,11 +31,22 @@ public class Implement extends ChatServiceGrpc.ChatServiceImplBase {
     public void replyServer(ChatApp.FromClient request, StreamObserver<ChatApp.LoginMessage> responseObserver) {
 
         ChatApp.LoginMessage.Builder reply = ChatApp.LoginMessage.newBuilder();
-        reply.setLogmessage(request.getName() + " has joined");
-        logger.info(request.getName() + " has joined");
-        System.out.println(reply.getLogmessage());
-        responseObserver.onNext(reply.build());
-        responseObserver.onCompleted();
+
+        if (request.getMessage().equalsIgnoreCase("login") ) {
+            reply.setLogmessage(request.getName() + " has joined");
+            logger.info(request.getName() + " has joined");
+            System.out.println(reply.getLogmessage());
+            responseObserver.onNext(reply.build());
+            responseObserver.onCompleted();
+        }
+        else {
+            reply.setLogmessage(request.getName() + " has left");
+            logger.info(request.getName() + " has LEFT");
+            System.out.println(reply.getLogmessage());
+            responseObserver.onNext(reply.build());
+            responseObserver.onCompleted();
+
+        }
 
     }
 
@@ -57,14 +68,14 @@ public class Implement extends ChatServiceGrpc.ChatServiceImplBase {
         System.out.println(messages);
     }
 
-    @Override
-    public void chatRequest(ChatApp.FromClient request, StreamObserver<ChatApp.FromServer> responseObserver) {
-        //return super.chatRequest(responseObserver);
-        ChatApp.FromServer.Builder reply = ChatApp.FromServer.newBuilder();
-        reply.setMessage(request.getName() + " left the conversation");
-        logger.info(request.getName() + " left the conversation");
-        System.out.println(reply.getMessage());
-        responseObserver.onNext(reply.build());
-        responseObserver.onCompleted();
-    }
+//    @Override
+//    public void chatRequest(ChatApp.FromClient request, StreamObserver<ChatApp.FromServer> responseObserver) {
+//        //return super.chatRequest(responseObserver);
+//        ChatApp.FromServer.Builder reply = ChatApp.FromServer.newBuilder();
+//        reply.setMessage(request.getName() + " left the conversation");
+//        logger.info(request.getName() + " left the conversation");
+//        System.out.println(reply.getMessage());
+//        responseObserver.onNext(reply.build());
+//        responseObserver.onCompleted();
+//    }
 }

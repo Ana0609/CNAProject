@@ -22,7 +22,7 @@ public class Main {
             nume = read.nextLine();
         }
             ChatStub.replyServer(
-                    ChatApp.FromClient.newBuilder().setName(nume).setMessage("default").build(),
+                    ChatApp.FromClient.newBuilder().setName(nume).setMessage("login").build(),
                     new StreamObserver<ChatApp.LoginMessage>() {
                         @Override
                         public void onNext(ChatApp.LoginMessage reply) {
@@ -84,12 +84,32 @@ public class Main {
 
                         break;
                     case 0:
-                        ChatStub.chatRequest(
-                                ChatApp.FromClient.newBuilder().setName(nume).setMessage("default").build(),
-                                new StreamObserver<ChatApp.FromServer>(){
+//                        ChatStub.chatRequest(
+//                                ChatApp.FromClient.newBuilder().setName(nume).setMessage("default").build(),
+//                                new StreamObserver<ChatApp.FromServer>(){
+//                                    @Override
+//                                    public void onNext(ChatApp.FromServer fromServer) {
+//                                        System.out.println(fromServer);
+//                                    }
+//
+//                                    @Override
+//                                    public void onError(Throwable throwable) {
+//                                        System.out.println("Error: " + throwable.getMessage());
+//                                    }
+//
+//                                    @Override
+//                                    public void onCompleted() {
+//
+//                                    }
+//                                }
+//                        );
+                        ChatStub.replyServer(
+                                ChatApp.FromClient.newBuilder().setName(nume).setMessage("logout").build(),
+                                new StreamObserver<ChatApp.LoginMessage>() {
                                     @Override
-                                    public void onNext(ChatApp.FromServer fromServer) {
-                                        System.out.println(fromServer);
+                                    public void onNext(ChatApp.LoginMessage reply) {
+                                        System.out.println(reply);
+
                                     }
 
                                     @Override
@@ -103,6 +123,7 @@ public class Main {
                                     }
                                 }
                         );
+
                         break;
                     default:
                         System.out.println("Nu stiu comanda asta!");

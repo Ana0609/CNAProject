@@ -5,22 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bb6e8fa-95d3-44ab-b18e-ae6e18ee0699" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/GUI/Views/mainFX.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/client.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proto/ChatApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proto/ChatApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proto/ChatServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proto/ChatServiceGrpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/GUI/Views/Main.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/proto/ChatApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/proto/ChatApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/proto/ChatServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/proto/ChatServiceGrpc.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="FxmlFile" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="E:\FAC\II\MIP\IntelliJ IDEA Community Edition 2020.2.3\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="1pCVgxHrE0kcKPxuTez5ztSuy1m" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -33,7 +42,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Program Files/Java/javafx-sdk-11.0.2/lib" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />

@@ -18,7 +18,7 @@ public class Main {
         Scanner read = new Scanner(System.in);
         String nume = read.nextLine();
         while (nume.length() == 0) {
-            System.out.println("Numele sunt obligatorie!Introduceti o nume mai lunga!");
+            System.out.println("Numele sunt obligatorii!Introduceti un nume mai lung!");
             nume = read.nextLine();
         }
             ChatStub.replyServer(
@@ -84,6 +84,25 @@ public class Main {
 
                         break;
                     case 0:
+                        ChatStub.chatRequest(
+                                ChatApp.FromClient.newBuilder().setName(nume).setMessage("default").build(),
+                                new StreamObserver<ChatApp.FromServer>(){
+                                    @Override
+                                    public void onNext(ChatApp.FromServer fromServer) {
+                                        System.out.println(fromServer);
+                                    }
+
+                                    @Override
+                                    public void onError(Throwable throwable) {
+                                        System.out.println("Error: " + throwable.getMessage());
+                                    }
+
+                                    @Override
+                                    public void onCompleted() {
+
+                                    }
+                                }
+                        );
                         break;
                     default:
                         System.out.println("Nu stiu comanda asta!");

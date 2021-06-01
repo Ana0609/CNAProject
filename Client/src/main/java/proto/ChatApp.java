@@ -2521,11 +2521,11 @@ public final class ChatApp {
       "\001(\t\022\017\n\007message\030\002 \001(\t\"+\n\nFromServer\022\014\n\004na" +
       "me\030\001 \001(\t\022\017\n\007message\030\002 \001(\t\"\"\n\014LoginMessag" +
       "e\022\022\n\nlogmessage\030\001 \001(\t\"\"\n\013MessageSent\022\023\n\013" +
-      "messagesent\030\001 \001(\t2\231\001\n\013ChatService\022+\n\013rep" +
+      "messagesent\030\001 \001(\t2\225\001\n\013ChatService\022+\n\013rep" +
       "lyServer\022\013.FromClient\032\r.LoginMessage\"\000\022." +
       "\n\017messageResponse\022\013.FromClient\032\014.Message" +
-      "Sent\"\000\022-\n\013chatRequest\022\013.FromClient\032\013.Fro" +
-      "mServer\"\000(\0010\001B\007\n\005protob\006proto3"
+      "Sent\"\000\022)\n\013chatRequest\022\013.FromClient\032\013.Fro" +
+      "mServer\"\000B\007\n\005protob\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

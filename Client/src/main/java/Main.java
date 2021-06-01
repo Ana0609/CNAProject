@@ -2,13 +2,21 @@
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
 import proto.ChatServiceGrpc;
 import proto.ChatApp;
 
 import java.util.Scanner;
 
-public class Main {
+public class Main {  //extends Application
     public static void main(String[] args) {
+
+        //launch();
 
         ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 8999).usePlaintext().build();
 
@@ -121,5 +129,17 @@ public class Main {
             channel.shutdown();
 
         }
-    }
+
+//    @Override
+//    public void start(Stage stage) throws Exception {
+//        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("GUI.Views/mainFX.fxml"));
+//        Parent root = (Parent) fxmlLoader.load();
+//
+//        Scene newScene = new Scene(root);
+//        stage.setTitle("Chat");
+//        stage.getIcons().add(new Image(getClass().getResourceAsStream("GUI.Views/logos/logo messages.jpg")));
+//        stage.setScene(newScene);
+//        stage.show();
+//    }
+}
 

@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bb6e8fa-95d3-44ab-b18e-ae6e18ee0699" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/GUI/Views/mainFX.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/proto/ChatApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proto/ChatApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/proto/ChatServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proto/ChatServiceGrpc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/GUI/Views/Main.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/proto/ChatApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/proto/ChatApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/proto/ChatServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/proto/ChatServiceGrpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

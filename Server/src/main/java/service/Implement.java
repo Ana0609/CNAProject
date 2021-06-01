@@ -52,7 +52,7 @@ public class Implement extends ChatServiceGrpc.ChatServiceImplBase {
 
     @Override
     public void messageResponse(ChatApp.FromClient request, StreamObserver<ChatApp.MessageSent> responseObserver) {
-//        super.messageSent(request, responseObserver);
+
         HashMap<String, String> messages = new HashMap<String, String>();
         ChatApp.MessageSent.Builder reply = ChatApp.MessageSent.newBuilder();
         reply.setMessagesent(request.getMessage());
@@ -67,15 +67,5 @@ public class Implement extends ChatServiceGrpc.ChatServiceImplBase {
 
         System.out.println(messages);
     }
-
-//    @Override
-//    public void chatRequest(ChatApp.FromClient request, StreamObserver<ChatApp.FromServer> responseObserver) {
-//        //return super.chatRequest(responseObserver);
-//        ChatApp.FromServer.Builder reply = ChatApp.FromServer.newBuilder();
-//        reply.setMessage(request.getName() + " left the conversation");
-//        logger.info(request.getName() + " left the conversation");
-//        System.out.println(reply.getMessage());
-//        responseObserver.onNext(reply.build());
-//        responseObserver.onCompleted();
-//    }
+    
 }

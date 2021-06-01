@@ -84,25 +84,7 @@ public class Main {
 
                         break;
                     case 0:
-//                        ChatStub.chatRequest(
-//                                ChatApp.FromClient.newBuilder().setName(nume).setMessage("default").build(),
-//                                new StreamObserver<ChatApp.FromServer>(){
-//                                    @Override
-//                                    public void onNext(ChatApp.FromServer fromServer) {
-//                                        System.out.println(fromServer);
-//                                    }
-//
-//                                    @Override
-//                                    public void onError(Throwable throwable) {
-//                                        System.out.println("Error: " + throwable.getMessage());
-//                                    }
-//
-//                                    @Override
-//                                    public void onCompleted() {
-//
-//                                    }
-//                                }
-//                        );
+
                         ChatStub.replyServer(
                                 ChatApp.FromClient.newBuilder().setName(nume).setMessage("logout").build(),
                                 new StreamObserver<ChatApp.LoginMessage>() {
